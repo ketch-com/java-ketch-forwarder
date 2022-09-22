@@ -1,9 +1,8 @@
 FROM alpine
-RUN wget -O /etc/apk/keys/amazoncorretto.rsa.pub  https://apk.corretto.aws/amazoncorretto.rsa.pub && \
-    echo "https://apk.corretto.aws/" >> /etc/apk/repositories && \
+RUN wget -O /etc/apk/keys/amazoncorretto.rsa.pub https://apk.corretto.aws/amazoncorretto.rsa.pub && \
     apk update && \
     apk --no-cache upgrade && \
-    apk add amazon-corretto-18 && \
+    apk add --repository https://apk.corretto.aws/ amazon-corretto-18 && \
     mkdir /docker-entrypoint-initdb.d /app
 COPY docker/ketch-event-forwarder/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY build/libs/ketch-event-forwarder-*.jar /app/ketch-event-forwarder.jar
