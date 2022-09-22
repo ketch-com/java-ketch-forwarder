@@ -14,7 +14,7 @@ import javax.validation.Validator;
 import java.util.stream.Collectors;
 
 @RestController
-public class EventForwarderController {
+public class KetchEventForwarderController {
     @Autowired
     Validator validator;
 

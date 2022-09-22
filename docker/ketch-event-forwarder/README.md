@@ -1,6 +1,6 @@
-# java-ketch-forwarder
+# ketch-event-forwarder
 
-This folder produces the java-ketch-forwarder container for the service.
+This folder produces the ketch-event-forwarder container for the service.
 
 ## Building
 
@@ -8,7 +8,7 @@ Build this container using the following command from the repository root:
 
 ```shell
 ./scripts/build.sh linux
-docker build -f docker/java-ketch-forwarder/Dockerfile .
+docker build -f docker/ketch-event-forwarder/Dockerfile .
 ```
 
 ## Contents
