@@ -33,7 +33,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'corretto'
-        java-version: '8'
+        java-version: '18'
         cache: 'gradle'
     - name: Set gradle version
       uses: conventional-actions/write-version@v1
