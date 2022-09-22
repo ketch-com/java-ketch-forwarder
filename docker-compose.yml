@@ -4,7 +4,7 @@ services:
   ketch-event-forwarder:
     build:
       context: .
-      dockerfile: docker/java-ketch-forwarder/Dockerfile
+      dockerfile: docker/ketch-event-forwarder/Dockerfile
     ports:
       - "8080:8080"
     restart: unless-stopped
