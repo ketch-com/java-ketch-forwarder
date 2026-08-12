@@ -58,12 +58,12 @@ jobs:
       packages: write
     steps:
     - name: Download docker artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v8
       with:
         name: docker
         path: docker
     - name: Download docker artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v8
       with:
         name: build
         path: build/libs
